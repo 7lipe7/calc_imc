@@ -1,0 +1,20 @@
+#calc-container {
+    min-height: 450px;
+    min-width: 400px;
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #1a1d33 0%, #252d47 100%);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 149, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    #calc-container {
+        min-width: auto;
+        min-height: auto;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,36 @@
+button {
+    text-transform: uppercase;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #ff9500, #ff6b00);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    flex: 1;
+    cursor: pointer;
+    opacity: 0.95;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+button:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 107, 0, 0.3);
+}
+
+#limp-btn {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3) !important;
+}
+
+#limp-btn:hover {
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5) !important;
+}
