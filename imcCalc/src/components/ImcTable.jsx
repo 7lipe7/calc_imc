@@ -1,11 +1,23 @@
 import "./ImcTable.css";
 
 const ImcTable = ({ data, imc, info, infoClass, onBack }) => {
+  const imcNumber = Number(imc);
+  const matched = data.find(
+    (item) => !Number.isNaN(imcNumber) && imcNumber >= item.min && imcNumber <= item.max
+  );
+  const levelClass = matched ? matched.colorClass : "";
+
   return (
     <div className="result-container">
-      <p id="imc-num">seu imc: <span className="imc-class">{imc}</span></p>
-      <p id="imc-info">situacao atual: <span>{info}</span></p>
-      <h3>sua classificacao atual: <span>{infoClass}</span></h3>
+      <p id="imc-num">
+        seu imc: <span className={`imc-class ${levelClass}`}>{imc}</span>
+      </p>
+      <p id="imc-info">
+        situacao atual: <span className={levelClass}>{info}</span>
+      </p>
+      <h3>
+        sua classificacao atual: <span className={levelClass}>{infoClass}</span>
+      </h3>
 
       <div className="imc-table">
         <div className="table-header">
@@ -15,10 +27,10 @@ const ImcTable = ({ data, imc, info, infoClass, onBack }) => {
         </div>
 
         {data.map((item) => (
-          <div className="table-data" key={item.classification}>
+          <div className={`table-data ${item.colorClass}`} key={item.classification}>
             <p>{item.min} - {item.max}</p>
             <p>{item.classification}</p>
-            <p>{item.obesity}</p>
+            <p className="obesity">{item.obesity}</p>
           </div>
         ))}
       </div>
