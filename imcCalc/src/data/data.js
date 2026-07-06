@@ -1,4 +1,4 @@
-// IMC DATA
+// IMC DATA (apenas dados — sem document/querySelector para funcionar com React)
 const data = [
   {
     min: 0,
@@ -37,15 +37,5 @@ const data = [
   },
 ];
 
-const imctable = document.querySelector("#imc-table");
-const alturainput = document.querySelector("#altura");
-const pesoinput = document.querySelector("#peso");
-const calcBtn = document.querySelector("#calc-btn");
-const imcnumber = document.querySelector("#imc-number span");
-const imcinfo = document.querySelector("#imc-info span");
-const cleanBtn = document.querySelector("#clean-btn");
-const backBtn = document.querySelector("#back-btn");
-const calcContainer = document.querySelector("#calc-container");
-const resultContainer = document.querySelector("#result-container");
-
 export default data;
+
