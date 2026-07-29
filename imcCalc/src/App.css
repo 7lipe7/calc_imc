@@ -1,6 +1,5 @@
 #calc-container {
     min-height: 450px;
-    min-width: 400px;
     width: 100%;
     max-width: 500px;
     background: linear-gradient(135deg, #1a1d33 0%, #252d47 100%);
@@ -10,11 +9,27 @@
     border: 1px solid rgba(255, 149, 0, 0.1);
 }
 
+.container {
+    width: min(100%, 980px);
+    margin: 0 auto;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 1rem;
+    }
+}
+
 @media (max-width: 600px) {
     #calc-container {
-        min-width: auto;
         min-height: auto;
         padding: 1.5rem;
-        margin: 1rem;
+        margin: 0;
+        border-radius: 14px;
     }
 }
